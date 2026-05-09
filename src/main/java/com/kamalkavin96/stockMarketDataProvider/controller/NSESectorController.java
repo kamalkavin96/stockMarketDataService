@@ -1,5 +1,6 @@
 package com.kamalkavin96.stockMarketDataProvider.controller;
 
+import com.kamalkavin96.stockMarketDataProvider.dto.NSEEquitySectorMetaResponse;
 import com.kamalkavin96.stockMarketDataProvider.model.NSEIndustries;
 import com.kamalkavin96.stockMarketDataProvider.model.NSESector;
 import com.kamalkavin96.stockMarketDataProvider.service.NSESectorService;
@@ -21,7 +22,7 @@ public class NSESectorController {
     NSESectorService nseSectorService;
 
     @GetMapping("/get-all")
-    public ResponseEntity<List<NSESector>> getAllSectorMapping(){
+    public ResponseEntity<List<NSEEquitySectorMetaResponse>> getAllSectorMapping(){
         return ResponseEntity.status(HttpStatus.OK).body(nseSectorService.getAllSectors());
     }
 

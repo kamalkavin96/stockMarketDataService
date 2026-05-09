@@ -29,7 +29,4 @@ public class NSESector {
     @Column(name = "logo_name", length = 255)
     private String logoName;
 
-    @Column(name = "macro_sector_id", nullable = false)
-    private Integer macroSectorId;
-
 }
