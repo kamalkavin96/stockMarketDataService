@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.kamalkavin96.stockMarketDataProvider.dto.NSEIndexItemResponse;
 import com.kamalkavin96.stockMarketDataProvider.dto.NSEIndicesCategoryResponse;
 import com.kamalkavin96.stockMarketDataProvider.dto.NSEIndicesPerformanceView;
+import com.kamalkavin96.stockMarketDataProvider.model.NSEIndices;
 import com.kamalkavin96.stockMarketDataProvider.repository.NSEIndicesRepo;
 
 import lombok.RequiredArgsConstructor;
@@ -41,5 +42,9 @@ public class NSEIndicesServices {
                         entry.getKey(),
                         entry.getValue()))
                 .toList();
+    }
+
+    public List<NSEIndices> getAllIndicesList(){
+        return nseIndicesRepo.findAll();
     }
 }
